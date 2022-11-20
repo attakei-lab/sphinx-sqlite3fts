@@ -1,0 +1,62 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "sphinx-sqlite3fts"
+authors = [{name = "Kazuya Takei", email = "myself@attakei.net"}]
+readme = "README.rst"
+license = {file = "LICENSE"}
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Environment :: Console",
+  "Environment :: Web Environment",
+  "Framework :: Sphinx",
+  "Framework :: Sphinx :: Extension",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Documentation :: Sphinx",
+  "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+  "Topic :: Internet :: WWW/HTTP :: Site Management",
+  "Topic :: Software Development",
+  "Topic :: Software Development :: Documentation",
+  "Topic :: Text Processing :: Markup :: HTML",
+]
+dynamic = ["version", "description"]
+dependencies = [
+  "docutils",
+  "Sphinx",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+]
+
+[project.urls]
+Home = "https://attakei-lab.github.io/sphinx-sqlite3fts"
+Repository = "https://github.com/attakei-lab/sphinx-sqlite3fts"
+
+[tool.flit.module]
+name = "sphinx_sqlite3fts"
+
+[tool.flit.sdist]
+exclude = [
+  ".github",
+  "docs/_build",
+]
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
