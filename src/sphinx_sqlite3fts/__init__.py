@@ -1,6 +1,8 @@
 """Sphinx document searcher using SQLite3."""
 from sphinx.application import Sphinx
 
+from . import events
+
 __version__ = "0.0.1"
 
 
@@ -9,6 +11,8 @@ def setup(app: Sphinx):
     from .builders import SqliteBuilder
 
     app.add_builder(SqliteBuilder)
+    app.connect("builder-inited", events.configure_database)
+    app.connect("build-finished", events.save_database)
     return {
         "version": __version__,
         "env_version": 1,

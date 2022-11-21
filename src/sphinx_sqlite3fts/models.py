@@ -1,4 +1,6 @@
 """Management database schema."""
+from pathlib import Path
+
 from playhouse import sqlite_ext
 
 db_proxy = sqlite_ext.DatabaseProxy()
@@ -37,3 +39,10 @@ def store_document(document: Document):
             DocumentFTS.body: document.body,
         }
     ).execute()
+
+
+def initialize(db_path: Path):
+    """Bind connection and create tables."""
+    db = sqlite_ext.SqliteExtDatabase(db_path)
+    db_proxy.initialize(db)
+    db_proxy.create_tables([Document, DocumentFTS])
