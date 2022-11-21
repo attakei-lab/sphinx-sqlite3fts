@@ -45,8 +45,7 @@ class SqliteBuilder(Builder):
         This method only insert into db, does not write file.
         """
         document = models.Document(page=docname)
-        titles = doctree.traverse(nodes.title)
-        document.title = titles[0].astext()
+        document.title = next(doctree.findall(nodes.title)).astext()
         contents = []
         picked_title = False
         for section in doctree.children:
