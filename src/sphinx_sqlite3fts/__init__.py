@@ -12,6 +12,7 @@ def setup(app: Sphinx):
 
     app.add_builder(SqliteBuilder)
     app.connect("builder-inited", events.configure_database)
+    app.connect("html-page-context", events.register_document)
     app.connect("build-finished", events.save_database)
     return {
         "version": __version__,

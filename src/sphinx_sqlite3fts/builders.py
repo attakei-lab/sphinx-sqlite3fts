@@ -4,7 +4,7 @@ from typing import Set
 from sphinx.builders import Builder
 from sphinx.util.docutils import nodes
 
-from . import models
+from . import models, services
 
 
 class SqliteBuilder(Builder):
@@ -30,15 +30,6 @@ class SqliteBuilder(Builder):
 
         This method only insert into db, does not write file.
         """
-        document = models.Document(page=docname)
-        document.title = next(doctree.findall(nodes.title)).astext()
-        contents = []
-        picked_title = False
-        for section in doctree.children:
-            for node in section.children:
-                if isinstance(node, nodes.title) and not picked_title:
-                    picked_title = True
-                    continue
-                contents.append(node.astext())
-        document.body = "\n".join(contents)
+        title, body = services.parse_document(doctree)
+        document = models.Document(page=docname, title=title, body=body)
         models.store_document(document)
