@@ -28,7 +28,7 @@ class SqliteBuilder(Builder):
             db_path.unlink()
         db = SqliteDatabase(db_path)
         models.db_proxy.initialize(db)
-        models.db_proxy.create_tables([models.Document, models.DocumentIndex])
+        models.db_proxy.create_tables([models.Document, models.DocumentFTS])
 
     def get_target_uri(self, docname: str, typ: str = None) -> str:  # noqa: D102
         return docname

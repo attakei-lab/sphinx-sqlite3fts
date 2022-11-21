@@ -15,7 +15,7 @@ class Document(sqlite_ext.Model):
         database = db_proxy
 
 
-class DocumentIndex(sqlite_ext.FTS5Model):
+class DocumentFTS(sqlite_ext.FTS5Model):
     """Searching model."""
 
     rowid = sqlite_ext.RowIDField()
@@ -30,10 +30,10 @@ class DocumentIndex(sqlite_ext.FTS5Model):
 def store_document(document: Document):
     """Save document data into database."""
     document.save()
-    DocumentIndex.insert(
+    DocumentFTS.insert(
         {
-            DocumentIndex.rowid: document.id,
-            DocumentIndex.title: document.title,
-            DocumentIndex.body: document.body,
+            DocumentFTS.rowid: document.id,
+            DocumentFTS.title: document.title,
+            DocumentFTS.body: document.body,
         }
     ).execute()
