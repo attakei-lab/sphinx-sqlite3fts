@@ -1,5 +1,6 @@
 """Management database schema."""
 from pathlib import Path
+from typing import Iterable
 
 from playhouse import sqlite_ext
 
@@ -41,8 +42,26 @@ def store_document(document: Document):
     ).execute()
 
 
-def initialize(db_path: Path):
-    """Bind connection and create tables."""
+def search_documents(keyword: str) -> Iterable[Document]:
+    """Search documents from keyword by full-text-search."""
+    return (
+        Document.select()
+        .join(DocumentFTS, on=(Document.id == DocumentFTS.rowid))
+        .where(DocumentFTS.match(keyword))
+        .order_by(DocumentFTS.bm25())
+    )
+
+
+def bind(db_path: Path):
+    """Bind connection.
+
+    This works only set db into proxy, not included creating tables.
+    """
     db = sqlite_ext.SqliteExtDatabase(db_path)
     db_proxy.initialize(db)
+
+
+def initialize(db_path: Path):
+    """Bind connection and create tables."""
+    bind(db_path)
     db_proxy.create_tables([Document, DocumentFTS])
