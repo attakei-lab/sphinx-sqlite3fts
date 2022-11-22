@@ -26,6 +26,8 @@ def register_document(
     """Register picked content into database."""
     if doctree is None:
         return
+    if pagename in app.config.sqlite3fts_exclude_pages:
+        return
     page = app.builder.get_target_uri(pagename)
     title, body = services.parse_document(doctree)
     document = models.Document(page=page, title=title, body=body)

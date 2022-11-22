@@ -30,6 +30,8 @@ class SqliteBuilder(Builder):
 
         This method only insert into db, does not write file.
         """
+        if docname in self.config.sqlite3fts_exclude_pages:
+            return
         title, body = services.parse_document(doctree)
         document = models.Document(page=docname, title=title, body=body)
         models.store_document(document)
