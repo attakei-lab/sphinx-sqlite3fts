@@ -1,6 +1,6 @@
-====
-Home
-====
+=================
+sphinx-sqlite3fts
+=================
 
 ``sphinx-sqlite3fts`` is sphinx extension to provide some components.
 
