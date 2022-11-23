@@ -17,10 +17,12 @@ When ``sphinx-build`` runs with this extension, builder generate these component
 * Records of all documents
 * Search page HTML with sql.js
 
+This will be useful when you want to embed strong full-text search with keeping static-site structure.
+
 Installation
 ============
 
-CThis is not published on PyPI.
+This is not published on PyPI.
 
 .. code-block:: console
 
