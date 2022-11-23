@@ -14,3 +14,4 @@ It implements minimum works and provide only minimum configurations.
    :maxdepth: 1
 
    getting-started
+   database-spec

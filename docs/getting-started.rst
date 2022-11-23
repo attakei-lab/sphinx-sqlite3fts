@@ -45,3 +45,5 @@ You can build database by ``sqlite`` builder.
 .. code-block:: sqlite3
 
    sqlite> SELECT * FROM documentindex MATCH "installation";
+
+See :doc:`./database-spec`.
