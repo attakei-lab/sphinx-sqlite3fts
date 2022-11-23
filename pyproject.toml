@@ -39,9 +39,15 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+cli = [
+  "Click",
+]
 test = [
   "pytest",
 ]
+
+[project.scripts]
+sphinx-sqlite3fts = "sphinx_sqlite3fts.cli:main"
 
 [project.urls]
 Home = "https://attakei-lab.github.io/sphinx-sqlite3fts"
