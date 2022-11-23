@@ -14,7 +14,7 @@ release = sphinx_sqlite3fts.__version__
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-extensions = ["sphinx_sqlite3fts"]
+extensions = ["sphinx.ext.githubpages", "sphinx_sqlite3fts"]
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 language = "ja"
