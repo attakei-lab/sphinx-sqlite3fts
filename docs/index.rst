@@ -16,3 +16,4 @@ It implements minimum works and provide only minimum configurations.
    getting-started
    database-spec
    cli-tool
+   changelogs
