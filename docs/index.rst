@@ -14,6 +14,7 @@ It implements minimum works and provide only minimum configurations.
    :maxdepth: 1
 
    getting-started
+   configuration
    database-spec
    cli-tool
    changelogs
