@@ -9,7 +9,7 @@ Requirements
 
   * You can see requirement packages from ``pyproject.toml``.
 
-* SQLite 3.9.0+
+* SQLite 3.34.0+
 
 Installation
 ============
