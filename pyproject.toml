@@ -8,7 +8,7 @@ authors = [{name = "Kazuya Takei", email = "myself@attakei.net"}]
 readme = "README.rst"
 license = {file = "LICENSE"}
 classifiers = [
-  "Development Status :: 1 - Planning",
+  "Development Status :: 3 - Alpha",
   "Environment :: Console",
   "Environment :: Web Environment",
   "Framework :: Sphinx",
