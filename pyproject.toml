@@ -55,6 +55,7 @@ sphinx-sqlite3fts = "sphinx_sqlite3fts.cli:main"
 [project.urls]
 Home = "https://attakei-lab.github.io/sphinx-sqlite3fts"
 Repository = "https://github.com/attakei-lab/sphinx-sqlite3fts"
+Documentation = "https://sphinx-sqlite3fts.readthedocs.io/"
 
 [tool.flit.module]
 name = "sphinx_sqlite3fts"
