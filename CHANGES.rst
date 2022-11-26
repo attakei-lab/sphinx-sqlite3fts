@@ -2,6 +2,19 @@
 Latest changes
 ==============
 
+v0.0.3
+======
+
+:date: 2022-11-26
+
+Update documents
+
+Documentation
+-------------
+
+* Add badges into readme and documentation.
+* Follow notes for v0.0.2
+
 v0.0.2
 ======
 
