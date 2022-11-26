@@ -12,6 +12,18 @@ class Document(sqlite_ext.Model):
 
     page = sqlite_ext.TextField(null=False, unique=True)
     title = sqlite_ext.TextField(null=False)
+
+    class Meta:  # noqa: D106
+        database = db_proxy
+
+
+class Section(sqlite_ext.Model):
+    """Section unit of document."""
+
+    document = sqlite_ext.ForeignKeyField(Document)
+    root = sqlite_ext.BooleanField(default=False, null=False)
+    ref = sqlite_ext.TextField(null=False)
+    title = sqlite_ext.TextField(null=False)
     body = sqlite_ext.TextField(null=False)
 
     class Meta:  # noqa: D106
@@ -64,4 +76,4 @@ def bind(db_path: Path):
 def initialize(db_path: Path):
     """Bind connection and create tables."""
     bind(db_path)
-    db_proxy.create_tables([Document, DocumentFTS])
+    db_proxy.create_tables([Document, Section, DocumentFTS])
