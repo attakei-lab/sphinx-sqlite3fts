@@ -20,4 +20,9 @@ Configuration
    :Default: ``False``
    :Example: ``True``
 
-   Use bustom search page.
+   Use custom search page.
+
+   If you set ``True`` for this, ``sphinx-sqlite3fts`` does these.
+
+   * Override JavaScript file for search.
+   * Change style to display search results.

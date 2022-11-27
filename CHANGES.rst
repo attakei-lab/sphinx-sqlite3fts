@@ -11,6 +11,7 @@ Features
 --------
 
 * Split sections from document for search (useful for refs of page).
+* Add flag: search from database instead of Sphinx bundled search feature.
 
 v0.0.3
 ======
