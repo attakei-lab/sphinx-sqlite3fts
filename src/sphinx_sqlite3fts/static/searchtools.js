@@ -100,7 +100,7 @@ class SearchEngine {
 
 
 const Search = {
-  engine: new SearchEngine(),
+  engine: null,
 
   init() {
     const query = new URLSearchParams(window.location.search).get("q");
@@ -123,5 +123,7 @@ const Search = {
   setIndex() {},
 }
 
-
-_ready(Search.init);
+addEventListener("DOMContentLoaded", () => {
+  Search.engine = new SearchEngine();
+  _ready(Search.init);
+});
