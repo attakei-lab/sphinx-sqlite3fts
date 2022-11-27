@@ -13,3 +13,16 @@ Configuration
 
    Value must be **docname**, not filename.
    If you want to exclude ``index.rst``, you should set ``index``.
+
+.. confval:: sqlite3fts_use_search_html
+
+   :Type: ``bool``
+   :Default: ``False``
+   :Example: ``True``
+
+   Use custom search page.
+
+   If you set ``True`` for this, ``sphinx-sqlite3fts`` does these.
+
+   * Override JavaScript file for search.
+   * Change style to display search results.

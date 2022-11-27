@@ -25,8 +25,13 @@ document table
 
 This table contains all of property for refer to documents.
 
-document-fts table
-------------------
+section table
+-------------
+
+This table contains all of property for refer to section of documents.
+
+content table
+-------------
 
 This table is registered only targets of full-text searching.
 Currently, this contains title and body of documents.
@@ -36,5 +41,7 @@ Currently, this contains title and body of documents.
 Relation
 --------
 
-``document-fts.rowid`` is as foreign key to ``document.id``.
-You can use ``JOIN`` statement two tables.
+* ``section.document_id`` is as foreign key to ``document.id``.
+* ``document-fts.rowid`` is as foreign key to ``section.id``.
+
+You can use ``JOIN`` statement some tables.

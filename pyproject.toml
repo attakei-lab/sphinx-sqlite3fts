@@ -8,7 +8,7 @@ authors = [{name = "Kazuya Takei", email = "myself@attakei.net"}]
 readme = "README.rst"
 license = {file = "LICENSE"}
 classifiers = [
-  "Development Status :: 1 - Planning",
+  "Development Status :: 3 - Alpha",
   "Environment :: Console",
   "Environment :: Web Environment",
   "Framework :: Sphinx",
@@ -56,6 +56,7 @@ sphinx-sqlite3fts = "sphinx_sqlite3fts.cli:main"
 [project.urls]
 Home = "https://attakei-lab.github.io/sphinx-sqlite3fts"
 Repository = "https://github.com/attakei-lab/sphinx-sqlite3fts"
+Documentation = "https://sphinx-sqlite3fts.readthedocs.io/"
 
 [tool.flit.module]
 name = "sphinx_sqlite3fts"
