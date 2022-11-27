@@ -29,9 +29,12 @@ def main(db: Path, keyword: str):
     - [BLANK]
     """
     models.bind(db)
-    for document in models.search_documents(keyword):
-        click.secho(document.page, fg="green")
-        click.echo(f"\t{document.title}")
+    for section in models.search_documents(keyword):
+        click.secho(section.document.page, fg="green")
+        if section.title:
+            click.echo(f"\t{section.document.title} / {section.title}")
+        else:
+            click.echo(f"\t{section.document.title}")
         click.echo("")
 
 
