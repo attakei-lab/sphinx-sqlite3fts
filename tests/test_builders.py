@@ -13,3 +13,5 @@ def test___work_builder(app: SphinxTestApp, status, warning):  # noqa
     assert db_path.exists()
     conn = sqlite3.connect(db_path)
     assert len(conn.execute("SELECT * FROM document").fetchall()) > 0
+    assert len(conn.execute("SELECT * FROM section").fetchall()) > 0
+    assert len(conn.execute("SELECT * FROM content").fetchall()) > 0

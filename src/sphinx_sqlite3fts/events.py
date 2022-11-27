@@ -29,9 +29,8 @@ def register_document(
     if pagename in app.config.sqlite3fts_exclude_pages:
         return
     page = app.builder.get_target_uri(pagename)
-    title, body = services.parse_document(doctree)
-    document = models.Document(page=page, title=title, body=body)
-    models.store_document(document)
+    document, sections = services.parse_document(doctree, page)
+    models.store_document(document, sections)
 
 
 def save_database(app: Sphinx, err: Exception = None):

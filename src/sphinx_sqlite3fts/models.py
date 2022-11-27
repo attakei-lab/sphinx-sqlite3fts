@@ -30,7 +30,7 @@ class Section(sqlite_ext.Model):
         database = db_proxy
 
 
-class DocumentFTS(sqlite_ext.FTS5Model):
+class Content(sqlite_ext.FTS5Model):
     """Searching model."""
 
     rowid = sqlite_ext.RowIDField()
@@ -42,25 +42,28 @@ class DocumentFTS(sqlite_ext.FTS5Model):
         options = {"tokenize": "trigram"}
 
 
-def store_document(document: Document):
+def store_document(document: Document, sections: Iterable[Section]):
     """Save document data into database."""
     document.save()
-    DocumentFTS.insert(
-        {
-            DocumentFTS.rowid: document.id,
-            DocumentFTS.title: document.title,
-            DocumentFTS.body: document.body,
-        }
-    ).execute()
+    for section in sections:
+        section.document = document
+        section.save()
+        Content.insert(
+            {
+                Content.rowid: section.id,
+                Content.title: section.title or document.title,
+                Content.body: section.body,
+            }
+        ).execute()
 
 
-def search_documents(keyword: str) -> Iterable[Document]:
+def search_documents(keyword: str) -> Iterable[Section]:
     """Search documents from keyword by full-text-search."""
     return (
-        Document.select()
-        .join(DocumentFTS, on=(Document.id == DocumentFTS.rowid))
-        .where(DocumentFTS.match(keyword))
-        .order_by(DocumentFTS.bm25())
+        Section.select()
+        .join(Content, on=(Section.id == Content.rowid))
+        .where(Content.match(keyword))
+        .order_by(Content.bm25())
     )
 
 
@@ -76,4 +79,4 @@ def bind(db_path: Path):
 def initialize(db_path: Path):
     """Bind connection and create tables."""
     bind(db_path)
-    db_proxy.create_tables([Document, Section, DocumentFTS])
+    db_proxy.create_tables([Document, Section, Content])

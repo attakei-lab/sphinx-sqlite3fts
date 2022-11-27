@@ -32,6 +32,5 @@ class SqliteBuilder(Builder):
         """
         if docname in self.config.sqlite3fts_exclude_pages:
             return
-        title, body = services.parse_document(doctree)
-        document = models.Document(page=docname, title=title, body=body)
-        models.store_document(document)
+        document, sections = services.parse_document(doctree, docname)
+        models.store_document(document, sections)
