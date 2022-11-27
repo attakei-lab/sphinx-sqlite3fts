@@ -22,7 +22,7 @@ class SearchEngine {
     const sqlPromise = initSqlJs({
       locateFile: file => `${ this.SQLITE_BASE }/${file}`,
     });
-    const dataPromise = fetch("/db.sqlite").then(res => res.arrayBuffer());
+    const dataPromise = fetch(`${DOCUMENTATION_OPTIONS.URL_ROOT}db.sqlite`).then(res => res.arrayBuffer());
     const [SQL, buf] = await Promise.all([sqlPromise, dataPromise]);
     this.db = new SQL.Database(new Uint8Array(buf));
     this.isReady = true;
@@ -76,9 +76,15 @@ class SearchEngine {
   }
 
   renderSearchResult(result) {
-    const countDocs = Object.keys(result).length;
+    const countDocs = Object.keys(result.documents).length;
     const searchResults = document.getElementById("search-results");
     searchResults.querySelector("h1.search-title").innerText = _("Search Results");
+    if (countDocs === 0) {
+      searchResults.querySelector("p.search-summary").innerText = _(
+        "Your search did not match any documents. Please make sure that all words are spelled correctly and that you've selected enough categories."
+      );
+      return;
+    }
     console.log(`Fetch ${countDocs} documents`);
     searchResults.querySelector("p.search-summary").innerText = _(`Search finished, found ${countDocs} page(s) matching the search query.`);
     Object.values(result.documents).forEach(doc => {
