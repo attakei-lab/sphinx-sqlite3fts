@@ -30,6 +30,8 @@ html_static_path = ["_static"]
 intersphinx_mapping = {
     "sphinx": ("https://www.sphinx-doc.org/en/master", None),
 }
+# sphinx-sqlite3fts
+sqlite3fts_use_search_html = True
 
 
 def setup(app):  # noqa: D103
