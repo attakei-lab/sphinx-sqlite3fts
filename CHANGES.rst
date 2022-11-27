@@ -2,10 +2,10 @@
 Latest changes
 ==============
 
-next
-====
+v0.1.0
+======
 
-:date: future
+:date: 2022-11-27
 
 Features
 --------
