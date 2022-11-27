@@ -2,6 +2,16 @@
 Latest changes
 ==============
 
+next
+====
+
+:date: future
+
+Features
+--------
+
+* Split sections from document for search (useful for refs of page).
+
 v0.0.3
 ======
 
