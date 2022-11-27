@@ -13,3 +13,11 @@ Configuration
 
    Value must be **docname**, not filename.
    If you want to exclude ``index.rst``, you should set ``index``.
+
+.. confval:: sqlite3fts_use_search_html
+
+   :Type: ``bool``
+   :Default: ``False``
+   :Example: ``True``
+
+   Use bustom search page.

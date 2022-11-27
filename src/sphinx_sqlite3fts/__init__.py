@@ -9,6 +9,7 @@ __version__ = "0.0.3"
 def setup(app: Sphinx):
     """Entrypoint as Sphinx extension."""
     app.add_config_value("sqlite3fts_exclude_pages", [], "env")
+    app.add_config_value("sqlite3fts_use_search_html", False, "env")
     app.add_builder(builders.SqliteBuilder)
     app.connect("builder-inited", events.configure_database)
     app.connect("html-page-context", events.register_document)
