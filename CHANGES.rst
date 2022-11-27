@@ -2,10 +2,25 @@
 Latest changes
 ==============
 
+v0.1.1
+======
+
+:date: 2022-11-28
+
+Small bug-fixes.
+
+Fixes
+-----
+
+* Force override ``searchindex.js`` as blank file.
+* ``searchtools.js`` initialize engine lazy.
+
 v0.1.0
 ======
 
 :date: 2022-11-27
+
+For JavaScript based search-engine.
 
 Features
 --------
