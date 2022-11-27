@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kazuya Takei
+# This file is distributed under the same license as the sphinx-sqlite3fts
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx-sqlite3fts \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-27 22:53+0900\n"
+"PO-Revision-Date: 2022-11-28 00:40+0900\n"
+"Last-Translator: Kazuya Takei <myself@attakei.net>\n"
+"Language-Team: Kazuya Takei <myself@attakei.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../configuration.rst:3
+msgid "Configuration"
+msgstr "設定"
+
+#: ../../configuration.rst
+msgid "Type"
+msgstr "型"
+
+#: ../../configuration.rst:7
+msgid "``List[str]``"
+msgstr ""
+
+#: ../../configuration.rst
+msgid "Default"
+msgstr "デフォルト値"
+
+#: ../../configuration.rst:8
+msgid "``[]``"
+msgstr ""
+
+#: ../../configuration.rst
+msgid "Example"
+msgstr "設定例"
+
+#: ../../configuration.rst:9
+msgid "``[\"index\", \"404\"]``"
+msgstr ""
+
+#: ../../configuration.rst:11
+msgid ""
+"List of documents that are excluded for target of register database. This"
+" should be used when some documents need not be searched."
+msgstr "検索対象から除外したいドキュメントのリスト。この設定は、特殊な用途のページを管理する際に役立ちます。"
+
+#: ../../configuration.rst:14
+msgid ""
+"Value must be **docname**, not filename. If you want to exclude "
+"``index.rst``, you should set ``index``."
+msgstr "設定する際の値は ファイル名ではなく **docname** 形式です。もし ``index.rst`` を除外したい場合は ``index`` を指定して下さい。"
+
+#: ../../configuration.rst:19
+msgid "``bool``"
+msgstr ""
+
+#: ../../configuration.rst:20
+msgid "``False``"
+msgstr ""
+
+#: ../../configuration.rst:21
+msgid "``True``"
+msgstr ""
+
+#: ../../configuration.rst:23
+msgid "Use custom search page."
+msgstr "データベースを利用した検索ページを使用します。"
+
+#: ../../configuration.rst:25
+msgid "If you set ``True`` for this, ``sphinx-sqlite3fts`` does these."
+msgstr "もしこの値が ``True`` の場合、ビルド時に次の機能を提供します。"
+
+#: ../../configuration.rst:27
+msgid "Override JavaScript file for search."
+msgstr "Sphinxバンドルの検索用JSを本機能のものに上書きする。"
+
+#: ../../configuration.rst:28
+msgid "Change style to display search results."
+msgstr "検索結果の表示スタイルを変更する。"
+

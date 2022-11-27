@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kazuya Takei
+# This file is distributed under the same license as the sphinx-sqlite3fts
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx-sqlite3fts \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-27 22:53+0900\n"
+"PO-Revision-Date: 2022-11-28 00:40+0900\n"
+"Last-Translator: Kazuya Takei <myself@attakei.net>\n"
+"Language-Team: Kazuya Takei <myself@attakei.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../database-spec.rst:3
+msgid "Database specification"
+msgstr "データベース仕様"
+
+#: ../../database-spec.rst:5
+msgid "This is writing about specification of generated database."
+msgstr "このページは生成されるデータベースの仕様について説明しています。"
+
+#: ../../database-spec.rst:8
+msgid "Base"
+msgstr "基本"
+
+#: ../../database-spec.rst:10
+msgid ""
+"Using SQLite and FTS5 extension. Details are described in `SQLite website"
+" <https://www.sqlite.org/fts5.html>`_."
+msgstr "SQLiteのFTS5拡張を使用しています。詳細については"
+"`SQLiteのサイト <https://www.sqlite.org/fts5.html>`_ を参照して下さい。"
+
+#: ../../database-spec.rst:13
+msgid "``sphinx-sqlite3fts`` run these strategy."
+msgstr "``sphinx-sqlite3fts`` は次の考え方で利用しています。"
+
+#: ../../database-spec.rst:15
+msgid ""
+"Use ``trigram`` tokenizer to search Japanese text (not work with "
+"``unicode61``)."
+msgstr "日本語ドキュメントの検索を前提としており、 ``trigram`` トークナイザーを使用する。"
+
+#: ../../database-spec.rst:16
+msgid ""
+"Split document table and searching virtual table (document has ``page`` "
+"that is not target of search)."
+msgstr "ドキュメントの基本情報とコンテンツ情報を分割してテーブル管理する。"
+"（ドキュメントにはページ名の情報があるが、これは検索対象にする必要がないため）"
+
+#: ../../database-spec.rst:19
+msgid "Tables"
+msgstr "テーブル校正"
+
+#: ../../database-spec.rst:21
+msgid "``sphinx-sqlite3fts`` use peewee to manage database schemas."
+msgstr "``sphinx-sqlite3fts`` はデータベースのスキーマ管理にpeeweeを採用しています。"
+
+#: ../../database-spec.rst:24
+msgid "document table"
+msgstr "documentテーブル"
+
+#: ../../database-spec.rst:26
+msgid "This table contains all of property for refer to documents."
+msgstr "ドキュメントごとに管理するべきデータを保存。（pageなど）"
+
+#: ../../database-spec.rst:29
+msgid "section table"
+msgstr "sectionテーブル"
+
+#: ../../database-spec.rst:31
+msgid "This table contains all of property for refer to section of documents."
+msgstr "ページ内のセクションIDのような、セクション単位で保持されているデータを保持。"
+
+#: ../../database-spec.rst:34
+msgid "content table"
+msgstr "contentテーブル"
+
+#: ../../database-spec.rst:36
+msgid ""
+"This table is registered only targets of full-text searching. Currently, "
+"this contains title and body of documents."
+msgstr "全文検索の対象となるデータを保持。現在はドキュメントのタイトルと本文をセクション単位で管理。"
+
+#: ../../database-spec.rst:39
+msgid "``body`` is plain text to pick all text contents from doctree."
+msgstr "``body`` （本文）はdoctreeからプレーンテキスト部分を抽出したもののみを保持。"
+
+#: ../../database-spec.rst:42
+msgid "Relation"
+msgstr "リレーション"
+
+#: ../../database-spec.rst:44
+msgid "``section.document_id`` is as foreign key to ``document.id``."
+msgstr ""
+
+#: ../../database-spec.rst:45
+msgid "``document-fts.rowid`` is as foreign key to ``section.id``."
+msgstr ""
+
+#: ../../database-spec.rst:47
+msgid "You can use ``JOIN`` statement some tables."
+msgstr ""
+

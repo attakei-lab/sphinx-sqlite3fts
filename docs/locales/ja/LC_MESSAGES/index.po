@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kazuya Takei
+# This file is distributed under the same license as the sphinx-sqlite3fts
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx-sqlite3fts \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-27 22:53+0900\n"
+"PO-Revision-Date: 2022-11-28 00:40+0900\n"
+"Last-Translator: Kazuya Takei <myself@attakei.net>\n"
+"Language-Team: Kazuya Takei <myself@attakei.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../index.rst:3
+msgid "sphinx-sqlite3fts"
+msgstr ""
+
+#: ../../index.rst:6
+msgid "PyPI"
+msgstr ""
+
+#: ../../index.rst
+msgid "Published stable"
+msgstr ""
+
+#: ../../index.rst:9
+msgid "GitHub Actions"
+msgstr ""
+
+#: ../../index.rst
+msgid "Run CI Status"
+msgstr ""
+
+#: ../../index.rst:12
+msgid "Read the Docs"
+msgstr ""
+
+#: ../../index.rst
+msgid "Documentation Status"
+msgstr ""
+
+#: ../../index.rst:17
+msgid "``sphinx-sqlite3fts`` is sphinx extension to provide some components."
+msgstr "``sphinx-sqlite3fts`` は次のものを提供するSphinx拡張です。"
+
+#: ../../index.rst:19
+msgid "Full-text search database by FTS5"
+msgstr "SQLite3+FTS5を用いた全文検索データベース"
+
+#: ../../index.rst:20
+msgid "Custom HTML to search by user"
+msgstr "HTML向けのカスタム全文検索機能"
+
+#: ../../index.rst:22
+msgid ""
+"This is experimental package. It implements minimum works and provide "
+"only minimum configurations."
+msgstr "これは、実験的なパッケージです。最小限の動作・設定のみで構成されています。"
+

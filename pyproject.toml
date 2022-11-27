@@ -44,6 +44,7 @@ cli = [
 ]
 docs = [
   "furo",
+  "sphinx-intl",
 ]
 test = [
   "pytest",

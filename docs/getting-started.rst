@@ -14,8 +14,13 @@ Requirements
 Installation
 ============
 
-This is not published on PyPI.
-If you want to try it, install from GitHub.
+This is published on PyPI.
+
+.. code-block:: console
+
+   pip install sphinx-sqlite3fts
+
+If you want to try latest source, install from GitHub.
 
 .. code-block:: console
 
@@ -32,6 +37,9 @@ At first, configuration on ``conf.py`` of your documentation.
        "sphinx_sqlite3fts",
    ]
 
+   # Set if you want to use for HTML search
+   sqlite3fts_use_search_html = True
+
 Try search by local database
 ----------------------------
 
@@ -44,6 +52,6 @@ You can build database by ``sqlite`` builder.
 
 .. code-block:: sqlite3
 
-   sqlite> SELECT * FROM documentindex MATCH "installation";
+   sqlite> SELECT * FROM content MATCH "installation";
 
 See :doc:`./database-spec`.
