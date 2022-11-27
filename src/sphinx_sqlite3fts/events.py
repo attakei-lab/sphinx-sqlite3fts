@@ -18,7 +18,7 @@ def setup_search_html(app: Sphinx, config: Config):
         app.builder.search = False
 
     def _generate_search_html(app: Sphinx):
-        (Path(app.builder.outdir) / "searchindex.js").touch()
+        (Path(app.builder.outdir) / "searchindex.js").write_text("")
         app.builder.globalcontext.update(
             {
                 "search_language_stop_words": "[]",
