@@ -2,6 +2,13 @@
 Latest changes
 ==============
 
+v0.1.2
+======
+
+:date: 2023-10-26
+
+(Add deprecated notes)
+
 v0.1.1
 ======
 

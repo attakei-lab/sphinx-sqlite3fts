@@ -4,7 +4,7 @@ from sphinx.util import logging
 
 from . import builders, events
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 logger = logging.getLogger(__name__)
 
