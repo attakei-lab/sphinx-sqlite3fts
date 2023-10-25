@@ -4,18 +4,10 @@ sphinx-sqlite3fts
 
 Sphinx new search page using SQL.js and SQLite database included FTS extension.
 
-.. image:: https://img.shields.io/pypi/v/sphinx-sqlite3fts.svg
-    :target: https://pypi.org/project/sphinx-sqlite3fts/
+.. note::
 
-.. image:: https://github.com/attakei-lab/sphinx-sqlite3fts/actions/workflows/main.yml/badge.svg?branch=main
-   :alt: Run CI
-   :target: https://github.com/attakei-lab/sphinx-sqlite3fts/actions/workflows/main.yml
-
-.. image:: https://readthedocs.org/projects/sphinx-sqlite3fts/badge/?version=latest
-    :target: https://sphinx-sqlite3fts.readthedocs.io/en/latest/?badge=latest
-    :alt: Documentation Status
-
-.. note:: This is experimental library
+   This is migrated to `atsphinx-sqlite3fts <https://github.com/atsphinx/sqlite3fts>`_,
+   and it stop manintenance.
 
 Overview
 ========

@@ -9,58 +9,68 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sphinx-sqlite3fts \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-27 22:53+0900\n"
+"POT-Creation-Date: 2023-10-26 01:22+0900\n"
 "PO-Revision-Date: 2022-11-28 00:40+0900\n"
 "Last-Translator: Kazuya Takei <myself@attakei.net>\n"
 "Language-Team: Kazuya Takei <myself@attakei.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
 #: ../../index.rst:3
 msgid "sphinx-sqlite3fts"
 msgstr ""
 
-#: ../../index.rst:6
-msgid "PyPI"
-msgstr ""
-
-#: ../../index.rst
-msgid "Published stable"
+#: ../../index.rst:7
+msgid "It stopped manintenance."
 msgstr ""
 
 #: ../../index.rst:9
-msgid "GitHub Actions"
+msgid ""
+"If you want to use same features, use `atsphinx-sqlite3fts "
+"<https://pypi.org/project/atsphinx-sqlite3fts>`_."
 msgstr ""
 
-#: ../../index.rst
-msgid "Run CI Status"
-msgstr ""
-
-#: ../../index.rst:12
-msgid "Read the Docs"
-msgstr ""
-
-#: ../../index.rst
-msgid "Documentation Status"
-msgstr ""
-
-#: ../../index.rst:17
+#: ../../index.rst:11
 msgid "``sphinx-sqlite3fts`` is sphinx extension to provide some components."
 msgstr "``sphinx-sqlite3fts`` は次のものを提供するSphinx拡張です。"
 
-#: ../../index.rst:19
+#: ../../index.rst:13
 msgid "Full-text search database by FTS5"
 msgstr "SQLite3+FTS5を用いた全文検索データベース"
 
-#: ../../index.rst:20
+#: ../../index.rst:14
 msgid "Custom HTML to search by user"
 msgstr "HTML向けのカスタム全文検索機能"
 
-#: ../../index.rst:22
+#: ../../index.rst:16
 msgid ""
 "This is experimental package. It implements minimum works and provide "
 "only minimum configurations."
 msgstr "これは、実験的なパッケージです。最小限の動作・設定のみで構成されています。"
+
+#~ msgid "PyPI"
+#~ msgstr ""
+
+#~ msgid "Published stable"
+#~ msgstr ""
+
+#~ msgid "GitHub Actions"
+#~ msgstr ""
+
+#~ msgid "Run CI Status"
+#~ msgstr ""
+
+#~ msgid "Read the Docs"
+#~ msgstr ""
+
+#~ msgid "Documentation Status"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is migrated to `atsphinx-sqlite3fts"
+#~ " <https://github.com/atsphinx/sqlite3fts>`_, and it "
+#~ "stop manintenance."
+#~ msgstr ""
 
